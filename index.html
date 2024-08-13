@@ -4,66 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http--equiv="X--UA--Compatible" content="ie=edge">
-    <meta name="description" content="" />
-    <link rel="icon" href="favicon.ico">
-    <title>Gregory Roberts</title>
+    <meta name="description" content="" >
+    <link rel="manifest" href="./src/assets/images/icons-logos/site.webmanifest">    <title>Gregory Roberts Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Ojuju:wght@200..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./src/styles/style.css">
     </head>
     <body>        
-        <!-- <div class="page">
-            <header class="header">
-                <div class="header__logo--wrapper">
-                    <img class="header__logo" src="./src/assets/images/icons-logos/sprite.svg#jot-logo" width="83.9514893px" height="43.9688826px" alt=""/>
-                </div>
-            </header> -->
-            <!-- <nav class="nav">
-                <div class="nav__categories-search--wrapper">
-                    <ul class="nav__categories">
-                        <li>
-                            <a class="nav__category" onmouseover="slidebar(event)">bio</a>
-                        </li>
-                        <li>
-                            <a class="nav__category" onmouseover="slidebar(event)">works</a>
-                        </li>
-                        <li>
-                            <a class="nav__category" onmouseover="slidebar(event)">resume</a>
-                        </li>
-                    </ul>
-                </div>
-                    <div class="header__login-and-bag--wrapper">
-                    
-                        <div class="header__navbar">
-                            <i class="header__navbar--icon fa-solid fa-bars" onclick="openNav()"></i>
-                            <div id="myNav" class="header__navbar--toggle header__navbar--overlay">
-                                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-                                <ul class="nav__categories mobile header__navbar--overlay-content">
-                                    <li>
-                                        <a class="nav__category" onmouseover="slidebar(event)">bio</a>
-                                    </li>
-                                    <li>
-                                        <a class="nav__category" onmouseover="slidebar(event)">works</a>
-                                    </li>
-                                    <li>
-                                        <a class="nav__category" onmouseover="slidebar(event)">resume</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-        </div> -->
-            <!-- </nav>  -->
+        <div class="page">
+
+            <!-- fixed header navigation menu -->
+            <section class="menu__wrapper">
+                <a id="home-btn" class="menu__title" href="#" onclick="handleClick(event)">Gregory Roberts</a>
+                <a id="portfolio-btn" class="menu__link" href="#portfolio" onclick="handleClick(event)">Portfolio</a>
+                <a id="experience-btn" class="menu__link" href="#experience" onclick="handleClick(event)">Experience</a>
+                <a id="bio-btn" class="menu__link" href="#bio" onclick="handleClick(event)">Bio</a>
+            </section>
+
+            <!-- main content -->
             <main class="main">
-                <div class="menu__wrapper">
-                    <h1 class="menu__title ">Gregory Roberts</h1>
-                    <h5 class="menu__link ">Portfolio</h5>
-                    <h5 class="menu__link ">Bio</h5>
-                    <h5 class="menu__link ">Experience</h5>
-                    <h5 class="menu__link ">Contact</h5>
-                </div>
-                <div class="carousel">
+                <!-- home landing page -->
+                <section id="home" class="carousel">
                     <div class="carousel__card--wrapper">
                         <div class="carousel__card carousel__card--three">
                             <div class="carousel__card--content">
@@ -110,224 +73,216 @@
                                 alt=""/>
                             </div>
                         </div>
-                        <div class="carousel__card carousel__card--four">
-                            <div class="carousel__card--content">
-                                <img 
-                                class="carousel__card--bg fade-four" 
-                                srcset="
-                                ./src/assets/images/carousel/cowboy-3.jpg 1440w,
-                                ./src/assets/images/carousel/cowboy-3.jpg 2880w" 
-                                sizes="(max-width: 1200px) 1440px, 2880px" 
-                                src="./src/assets/images/carousel/cowboy-3.jpg 1440w,
-                                ./src/assets/images/carousel/cowboy-3.jpg" 
-                                alt=""/>
-                                <div class="carousel__card--copy-wrapper">
-                                    <!-- <h1 class="carousel__card--title ">Gregory Roberts</h1> -->
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel__card carousel__card--five">
-                            <div class="carousel__card--content">
-                                <img 
-                                class="carousel__card--bg fade-five" 
-                                srcset="
-                                ./src/assets/images/carousel/cowboy-2.jpg 1440w,
-                                ./src/assets/images/carousel/cowboy-2.jpg 2880w" 
-                                sizes="(max-width: 1200px) 1440px, 2880px" 
-                                src="./src/assets/images/carousel/cowboy-2.jpg 1440w,
-                                ./src/assets/images/carousel/cowboy-2.jpg" 
-                                alt=""/>
-                                <div class="carousel__card--copy-wrapper">
-                                    <!-- <h1 class="carousel__card--title ">Gregory Roberts</h1> -->
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel__card carousel__card--six">
-                            <div class="carousel__card--content">
-                                <img 
-                                class="carousel__card--bg fade-six" 
-                                srcset="
-                                ./src/assets/images/carousel/cowboy-1.jpg 1440w,
-                                ./src/assets/images/carousel/cowboy-1.jpg 2880w" 
-                                sizes="(max-width: 1200px) 1440px, 2880px" 
-                                src="./src/assets/images/carousel/cowboy-1.jpg 1440w,
-                                ./src/assets/images/carousel/cowboy-1.jpg" 
-                                alt=""/>
-                            </div>
-                        </div>
-
                     </div>
-                </div>
-                <section class="trending">
-                    <h4 class="trending__title">works gallery</h4>
-                        <div class="trending__card--carousel">
-                            <ul class="trending__card--wrapper">
-                                <li class="trending__card">
-                                    <div class="trending__card--image-wrapper">
-                                        <img 
-                                        class="trending__card--image"
-                                        srcset="
-                                        ./src/assets/images/trending/new-arrival-purse.png 264w,
-                                        ./src/assets/images/trending/new-arrival-purse-2x.png 528w"
-                                        sizes="(max-width: 768px) 264px, 528px"
-                                        src="./src/assets/images/trending/new-arrival-purse-2x.png"
-                                        alt=""
-                                        />
-                                        <div class="trending__card--button-wrapper">
-                                            <a role="button" href="" class="trending__card--button">explore
-                                            </a>
-                                            <img src="./src/assets/images/icons-logos/sprite.svg#pointer-right" alt="" class="trending__card--icon" />
-                                        </div>
-                                    </div>
-                                    <h6 class="trending__card--banner">Blog</h6>
-                                    <h6 class="trending__card--price">White Rabbits Album Tour</h6>
-                                    <h6 class="trending__card--title">site content mgmt | post copy | artwork</h6>
-                                </li>
-                                <li class="trending__card">
-                                    <div class="trending__card--image-wrapper">
-                                        <img 
-                                        class="trending__card--image"
-                                        srcset="
-                                        ./src/assets/images/trending/new-arrival-purse.png 264w,
-                                        ./src/assets/images/trending/new-arrival-purse-2x.png 528w"
-                                        sizes="(max-width: 768px) 264px, 528px"
-                                        src="./src/assets/images/trending/new-arrival-purse-2x.png"
-                                        alt=""
-                                        />
-                                        <div class="trending__card--button-wrapper">
-                                            <a role="button" href="" class="trending__card--button">explore
-                                            </a>
-                                            <img src="./src/assets/images/icons-logos/sprite.svg#pointer-right" alt="" class="trending__card--icon" />
-                                        </div>
-                                    </div>
-                                    <h6 class="trending__card--banner">Blog</h6>
-                                    <h6 class="trending__card--price">White Rabbits Album Tour</h6>
-                                    <h6 class="trending__card--title">site content mgmt | post copy | artwork</h6>
-                                </li>
-                                <li class="trending__card">
-                                    <div class="trending__card--image-wrapper">
-                                        <img 
-                                        class="trending__card--image"
-                                        srcset="
-                                        ./src/assets/images/trending/new-arrival-purse.png 264w,
-                                        ./src/assets/images/trending/new-arrival-purse-2x.png 528w"
-                                        sizes="(max-width: 768px) 264px, 528px"
-                                        src="./src/assets/images/trending/new-arrival-purse-2x.png"
-                                        alt=""
-                                        />
-                                        <div class="trending__card--button-wrapper">
-                                            <a role="button" href="" class="trending__card--button">explore
-                                            </a>
-                                            <img src="./src/assets/images/icons-logos/sprite.svg#pointer-right" alt="" class="trending__card--icon" />
-                                        </div>
-                                    </div>
-                                    <h6 class="trending__card--banner">Blog</h6>
-                                    <h6 class="trending__card--price">White Rabbits Album Tour</h6>
-                                    <h6 class="trending__card--title">site content mgmt | post copy | artwork</h6>
-                                </li>
-                                <li class="trending__card">
-                                    <div class="trending__card--image-wrapper">
-                                        <img 
-                                        class="trending__card--image"
-                                        srcset="
-                                        ./src/assets/images/trending/new-arrival-purse.png 264w,
-                                        ./src/assets/images/trending/new-arrival-purse-2x.png 528w"
-                                        sizes="(max-width: 768px) 264px, 528px"
-                                        src="./src/assets/images/trending/new-arrival-purse-2x.png"
-                                        alt=""
-                                        />
-                                        <div class="trending__card--button-wrapper">
-                                            <a role="button" href="" class="trending__card--button">explore
-                                            </a>
-                                            <img src="./src/assets/images/icons-logos/sprite.svg#pointer-right" alt="" class="trending__card--icon" />
-                                        </div>
-                                    </div>
-                                    <h6 class="trending__card--banner">Blog</h6>
-                                    <h6 class="trending__card--price">White Rabbits Album Tour</h6>
-                                    <h6 class="trending__card--title">site content mgmt | post copy | artwork</h6>
-                                </li>
-                                <li class="trending__card">
-                                    <div class="trending__card--image-wrapper">
-                                        <img 
-                                        class="trending__card--image"
-                                        srcset="
-                                        ./src/assets/images/trending/new-arrival-purse.png 264w,
-                                        ./src/assets/images/trending/new-arrival-purse-2x.png 528w"
-                                        sizes="(max-width: 768px) 264px, 528px"
-                                        src="./src/assets/images/trending/new-arrival-purse-2x.png"
-                                        alt=""
-                                        />
-                                        <div class="trending__card--button-wrapper">
-                                            <a role="button" href="" class="trending__card--button">explore
-                                            </a>
-                                            <img src="./src/assets/images/icons-logos/sprite.svg#pointer-right" alt="" class="trending__card--icon" />
-                                        </div>
-                                    </div>
-                                    <h6 class="trending__card--banner">Blog</h6>
-                                    <h6 class="trending__card--price">White Rabbits Album Tour</h6>
-                                    <h6 class="trending__card--title">site content mgmt | post copy | artwork</h6>
-                                </li>
-                                <li class="trending__card">
-                                    <div class="trending__card--image-wrapper">
-                                        <img 
-                                        class="trending__card--image"
-                                        srcset="
-                                        ./src/assets/images/trending/new-arrival-purse.png 264w,
-                                        ./src/assets/images/trending/new-arrival-purse-2x.png 528w"
-                                        sizes="(max-width: 768px) 264px, 528px"
-                                        src="./src/assets/images/trending/new-arrival-purse-2x.png"
-                                        alt=""
-                                        />
-                                        <div class="trending__card--button-wrapper">
-                                            <a role="button" href="" class="trending__card--button">explore
-                                            </a>
-                                            <img src="./src/assets/images/icons-logos/sprite.svg#pointer-right" alt="" class="trending__card--icon" />
-                                        </div>
-                                    </div>
-                                    <h6 class="trending__card--banner">Blog</h6>
-                                    <h6 class="trending__card--price">White Rabbits Album Tour</h6>
-                                    <h6 class="trending__card--title">site content mgmt | post copy | artwork</h6>
-                                </li>
-                            </ul>  
-                        </div>
                 </section>
 
-                <section class="collections">
-                    <div class="collections__card">
-                        <img 
-                        class="collections__card--image" 
-                        srcset="
-                        ./src/assets/images/collections/fresh-appeal.png 720w, 
-                        ./src/assets/images/collections/fresh-appeal-2x.png 1440w" 
-                        sizes="(max-width: 720px) 720px, 1440px" 
-                        src="./src/assets/images/collections/fresh-appeal-2x.png" 
-                        alt=""/>
-                        <div class="collections__card--wrapper">
-                            <h1 class="collections__card--title">Fresh Appeal</h1>
-                            <div class="collections__card--button-wrapper">
-                                <a role="button" href="" class="collections__card--button">shop the collection<img src="./src/assets/images/icons-logos/sprite.svg#pointer-right-lg" alt="" class="collections__card--icon" />
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="collections__card">
-                        <img 
-                        class="collections__card--image" 
-                        srcset="
-                        ./src/assets/images/collections/dressed-up.png 720w, 
-                        ./src/assets/images/collections/dressed-up-2x.png 1440w" 
-                        sizes="(max-width: 720px) 720px, 1440px" 
-                        src="./src/assets/images/collections/dressed-up-2x.png" 
-                        alt=""/>
-                        <div class="collections__card--wrapper">
-                            <h1 class="collections__card--title">Dressed Up</h1>
-                            <div class="collections__card--button-wrapper">
-                                <a role="button" href="" class="collections__card--button">shop the collection<img src="./src/assets/images/icons-logos/sprite.svg#pointer-right" alt="" class="collections__card--icon" />
-                                </a>
-                            </div>
-                        </div>
+                <!-- portfolio section -->
+                <section id="portfolio"  class="portfolio">
+                    <!-- <h1 class="trending__title">Portfolio</h1> -->
+                    <div class="trending">
+                        <!-- portfolio thumbnails -->
+                            <ul class="trending__card--wrapper">
 
+                                <!-- card one white rabbits website -->
+                                <li class="trending__card">
+                                    <div class="trending__card--image-wrapper">
+                                        <img 
+                                        class="trending__card--image"
+                                        srcset="./src/assets/images/portfolio/thumbs/website-thumb.png"
+                                        sizes="(max-width: 768px) 264px, 528px"
+                                        src="./src/assets/images/portfolio/thumbs/website-thumb.png"
+                                        alt=""
+                                        />
+                                        <div class="trending__card--button-wrapper">
+                                            <a role="button" href="#website" class="trending__card--button">Website
+                                            </a>
+                                            <img src="./src/assets/images/portfolio/thumbs/website-thumb.png"
+                                            alt="" class="trending__card--icon" />
+                                        </div>
+                                    </div>
+                                </li>
+                                <!-- card two black pumas -->
+                                <li class="trending__card">
+                                    <div class="trending__card--image-wrapper">
+                                        <img 
+                                        class="trending__card--image"
+                                        srcset="./src/assets/images/portfolio/thumbs/album-thumb.png"
+                                        sizes="(max-width: 768px) 264px, 528px"
+                                        src="./src/assets/images/portfolio/thumbs/album-thumb.png"
+                                        alt=""
+                                        />
+                                        <div class="trending__card--button-wrapper">
+                                            <a role="button" href="#album" class="trending__card--button">Album
+                                            </a>
+                                            <img src="./src/assets/images/portfolio/thumbs/album-thumb.png" alt="" class="trending__card--icon" />
+                                        </div>
+                                    </div>
+                                </li>
+                                <!-- card three tommy johns -->
+                                <li class="trending__card">
+                                    <div class="trending__card--image-wrapper">
+                                        <img 
+                                        class="trending__card--image"
+                                        srcset="./src/assets/images/portfolio/thumbs/tommy-thumb.png"
+                                        sizes="(max-width: 768px) 264px, 528px"
+                                        src="./src/assets/images/portfolio/thumbs/tommy-thumb.png"
+                                        alt=""
+                                        />
+                                        <div class="trending__card--button-wrapper">
+                                            <a role="button" href="#commercial" class="trending__card--button">Commercial
+                                            </a>
+                                            <img src="./src/assets/images/portfolio/thumbs/tommy-thumb.png" alt="" class="trending__card--icon" />
+                                        </div>
+                                    </div>
+                                </li>
+                                <!-- card four artist bio -->
+                                <li class="trending__card">
+                                    <div class="trending__card--image-wrapper">
+                                        <img 
+                                        class="trending__card--image"
+                                        srcset="
+                                        ./src/assets/images/portfolio/thumbs/bio-thumb.jpg" 
+                                        sizes="(max-width: 768px) 264px, 528px"
+                                        src="./src/assets/images/portfolio/thumbs/bio-thumb.jpg"
+                                        alt=""
+                                        />
+                                        <div class="trending__card--button-wrapper">
+                                            <a role="button" href="#artist-bio" class="trending__card--button">Bio
+                                            </a>
+                                            <img src="./src/assets/images/portfolio/thumbs/bio-thumb.jpg" alt="" class="trending__card--icon" />
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <!-- card five blk tux campaign -->
+                                <li class="trending__card">
+                                    <div class="trending__card--image-wrapper">
+                                        <img 
+                                        class="trending__card--image"
+                                        srcset="
+                                        ./src/assets/images/portfolio/thumbs/blktux-thumb.png" 
+                                        sizes="(max-width: 768px) 264px, 528px"
+                                        src="./src/assets/images/portfolio/thumbs/blktux-thumb.png"
+                                        alt=""
+                                        />
+                                        <div class="trending__card--button-wrapper">
+                                            <a role="button" href="#campaign" class="trending__card--button">Campaign
+                                            </a>
+                                            <img src="./src/assets/images/portfolio/thumbs/blktux-thumb.png" alt="" class="trending__card--icon" />
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <!-- card six facebook profiles -->
+                                <li class="trending__card">
+                                    <div class="trending__card--image-wrapper">
+                                        <img 
+                                        class="trending__card--image"
+                                        srcset="
+                                        ./src/assets/images/portfolio/thumbs/fb-bio-thumb.png" 
+                                        sizes="(max-width: 768px) 264px, 528px"
+                                        src="./src/assets/images/portfolio/thumbs/fb-bio-thumb.png"
+                                        alt=""
+                                        />
+                                        <div class="trending__card--button-wrapper">
+                                            <a role="button" href="#newsletter" class="trending__card--button">Newsletter
+                                            </a>
+                                            <img src="./src/assets/images/portfolio/thumbs/fb-bio-thumb.png" alt="" class="trending__card--icon" />
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>  
+
+                        <!-- portfolio detailed cards -->
+                        <ul class="portfolio__detail">
+
+                            <!-- details one white rabbits blog -->
+                            <li id="website">
+                                <img src="./src/assets/images/portfolio/white-rabbits-final.jpg"/>
+                                <h6 class="trending__card--price">White Rabbits Band Web Posts</h6>
+                                <h6 class="trending__card--title">Content Management | Post Copy | Photography</h6>
+                            </li>
+
+                            <!-- details two black pumas -->
+                            <li id="album">
+                                <img src="./src/assets/images/trending/black-pumas.jpg"/>
+                                <h6 class="trending__card--price">Black Pumas Album Design</h6>
+                                <h6 class="trending__card--title">Creative Consultant | Photoshoot Production</h6>
+                            </li>
+
+                            <!-- detail three tommy john -->
+                            <li id="commercial">
+                                <iframe src="https://player.vimeo.com/video/142676466?h=809e190135" width="640" height="360"        frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen>
+                                </iframe>
+                                <h6 class="trending__card--price">Tommy John Commercial</h6>
+                                <h6 class="trending__card--title">Creative Consultant | Music Supervision</h6>
+                            </li>
+
+                            <!-- detail four artist bio -->
+                            <li id="artist-bio">
+                                <img src="./src/assets/images/trending/artist-bio.jpg"/>
+                                <h6 class="trending__card--banner">Artist Bio</h6>
+                                <h6 class="trending__card--price">Gregory Roberts Creative Profile</h6>
+                                <p>Gregory Roberts is a musician, songwriter and founding member of the NYC-based band White Rabbits. Roberts has also worked with acclaimed artists like Britt Daniel of Spoon and Rostam Batmanglij of Vampire Weekend, and has shared the stage with acts such as Kevin Morby, Arcade Fire, The National and Muse. He is currently serving as long-standing bassist and backing vocalist for the beloved singer-songwriter Hamilton Leithauser (The Walkmen), recently wrapping up another successful month long residency at the Cafe Carlyle in New York City.</p>
+                            </li>
+
+                            
+                            <!-- detail five blk tux-->
+                            <li id="campaign">
+                                <img src="./src/assets/images/portfolio/thumbs/blktux-thumb.png"/>
+                                <h6 class="trending__card--price">Black Tux Fashion Campaign</h6>
+                                <h6 class="trending__card--title">Creative Consultant | Music Supervision</h6>
+                            </li>
+
+                            
+                            <!-- detail six facebook bio -->
+                            <li id="newsletter">
+                                <img src="./src/assets/images/portfolio/thumbs/fb-bio-thumb.png"/>
+                                <h6 class="trending__card--price">Facebook Newsletter Posts</h6>
+                                <h6 class="trending__card--title">Employee Profiles | Team Manager</h6>
+                            </li>
+                        </ul>
                     </div>
+                </section>
+
+                <section id="experience" class="experience">
+                    <h1>Experience</h1>
+                    <ul>
+                        <li>
+                            <p>wordpress</p>
+                        </li>
+                        <li>
+                            <p>wordpress</p>
+                        </li>
+                        <li>
+                            <p>wordpress</p>
+                        </li>
+                        <li>
+                            <p>wordpress</p>
+                        </li>
+                        <li>
+                            <p>wordpress</p>
+                        </li>
+                        <li>
+                            <p>wordpress</p>
+                        </li>
+
+                    </ul>
+                </section>
+                <section id="bio" class="bio">
+                    <h1>Bio</h1>
+                    <p>Long ago and far away, I dreamed a dream one day
+                        And now that dream is here beside me
+                        Long the skies were overcast but now the clouds have passed
+                        You're here at last
+                        Chills run up and down my spine, Aladdin's lamp is mine
+                        The dream I dreamed was not denied me
+                        Just one look and then I knew
+                        That all I longed for long ago was you
+                        Chills run up and down my spine, Aladdin's lamp is mine
+                        The dream I dreamed was not denied me
+                        Just one look and then I knew
+                        That all I longed for long ago was you...</p>
                 </section>
                 <!-- <section class="rewards">
                     <img class="rewards__image" src="./src/assets/images/icons-logos/sprite.svg#triangle" alt=""/>

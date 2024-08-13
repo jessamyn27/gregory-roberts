@@ -1,3 +1,49 @@
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fadeOne {
+  0% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+@keyframes fadeTwo {
+  0% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
 * {
   box-sizing: border-box;
 }
@@ -91,6 +137,10 @@ video {
   vertical-align: baseline;
 }
 
+a {
+  text-decoration: none;
+}
+
 article,
 aside,
 details,
@@ -106,11 +156,12 @@ section {
 }
 
 body {
+  font-family: "Open Sans", sans-serif;
   background-color: #000000;
   color: #ffffff;
   line-height: 1;
   margin: 0;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 ol,
@@ -155,6 +206,31 @@ input:focus, input:active, input:disabled, input:visited, input:focus-within, in
   outline: none;
 }
 
+h1 {
+  font-family: "Ojuju", sans-serif;
+  font-size: 27px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 21px;
+}
+
+h4 {
+  font-size: 19px;
+}
+
+h5 {
+  font-size: 16px;
+}
+
+p {
+  font-size: 16px;
+}
+
 @keyframes slide {
   from {
     transform: translateX(0);
@@ -179,10 +255,28 @@ input:focus, input:active, input:disabled, input:visited, input:focus-within, in
     opacity: 0;
   }
 }
-body {
-  font-family: "Open Sans", sans-serif;
+@keyframes fadeOne {
+  0% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 0.5;
+  }
 }
-
+@keyframes fadeTwo {
+  0% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
 .page {
   display: none;
   align-items: center;
@@ -192,57 +286,45 @@ body {
   flex-direction: column;
   font-family: "Open Sans", sans-serif;
   margin: 0;
-  overflow-x: hidden;
+  overflow: scroll;
+  scrollbar-color: rgba(40, 19, 19, 0.4117647059) rgba(40, 19, 19, 0.2039215686);
+  scrollbar-width: thin;
 }
 
-@keyframes fadeOne {
-  0% {
-    opacity: 0.7;
-  }
-  50% {
-    opacity: 0.3;
-  }
-  100% {
-    opacity: 0.7;
-  }
+.menu__wrapper {
+  background-color: #150303;
+  left: 0;
+  overflow: hidden;
+  padding-bottom: 10px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 2;
 }
-@keyframes fadeTwo {
-  0% {
-    opacity: 0.2;
-  }
-  50% {
-    opacity: 0.8;
-  }
-  100% {
-    opacity: 0.2;
-  }
+.menu__title {
+  font-family: "Ojuju", sans-serif;
+  color: rgba(101, 89, 89, 0.8078431373);
+  font-size: 27px;
+  font-weight: 400;
+  padding-bottom: 5px;
+  text-align: left;
+  text-transform: uppercase;
 }
-@keyframes fadeFour {
-  0% {
-    opacity: 0.5;
-  }
-  50% {
-    opacity: 0.3;
-  }
-  100% {
-    opacity: 0.5;
-  }
+.menu__link {
+  color: rgba(101, 89, 89, 0.8078431373);
+  font-size: 14px;
+  padding: 10px 0 0px 7px;
 }
-@keyframes fadeFive {
-  0% {
-    opacity: 0.4;
-  }
-  50% {
-    opacity: 0.6;
-  }
-  100% {
-    opacity: 0.4;
-  }
+.menu__link:hover {
+  color: rgba(255, 255, 255, 0.915);
+  cursor: pointer;
+  text-decoration: none;
+  transition: 250ms;
 }
+
 .header {
   margin: 0 80px;
   max-width: 1500px;
-  width: calc(100vw - 160px);
 }
 .header__logo {
   bottom: 10px;
@@ -315,7 +397,6 @@ body {
 .header__navbar--overlay {
   background-color: #ffffff;
   height: 100%;
-  overflow-x: hidden;
   position: fixed;
   right: 0;
   top: 0;
@@ -353,7 +434,6 @@ body {
 .nav {
   margin: 32px 80px 18px;
   max-width: 1500px;
-  overflow: hidden;
   width: 100%;
 }
 .nav__categories {
@@ -374,13 +454,13 @@ body {
 }
 .nav .to-left,
 .nav .to-right {
-  display: inline-block;
+  display: block;
   position: relative;
   text-decoration: none;
 }
 .nav .to-left::after,
 .nav .to-right::after {
-  background: #000000;
+  background: white;
   bottom: 0;
   content: "";
   height: 3px;
@@ -511,28 +591,12 @@ body {
 }
 
 .main {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   margin: 0 80px;
   max-width: 1500px;
-  overflow-x: hidden;
-  width: calc(100vw - 160px);
-}
-.main .menu__wrapper {
-  left: 50px;
-  position: absolute;
-  top: 50px;
-  z-index: 2;
-}
-.main .menu__title {
-  color: rgba(101, 89, 89, 0.6431372549);
-  font-size: 27px;
-  font-weight: 300;
-  padding-bottom: 10px;
-  text-align: left;
-}
-.main .menu__link {
-  color: rgba(255, 255, 255, 0.5137254902);
-  font-size: 12px;
-  padding-top: 10px;
 }
 .main .carousel {
   display: flex;
@@ -638,27 +702,28 @@ body {
   top: 2px;
 }
 .main .carousel__card .fade-one {
-  animation: fadeOne 60s infinite;
+  animation: fadeOne 17s infinite;
+  opacity: 0.1;
 }
 .main .carousel__card .fade-two {
-  animation: fadeOne 20s infinite;
+  animation: fadeOne 10s infinite;
+  opacity: 0.1;
 }
 .main .carousel__card .fade-three {
-  animation: fadeThree 30s infinite;
-}
-.main .carousel__card .fade-four {
-  animation: fadeFour 18s infinite;
+  animation: fadeTwo 25s infinite;
+  opacity: 0.1;
 }
 .main .carousel__card .fade-five {
-  animation: fadeFive 45s infinite;
+  animation: fadeTwo 25s infinite;
+  opacity: 0.1;
 }
 .main .carousel__card .fade-six {
   animation: fadeTwo 22s infinite;
+  opacity: 0.1;
 }
 .main .collections {
   display: flex;
   margin-top: 30px;
-  overflow: hidden;
   width: 100%;
 }
 .main .collections__card {
@@ -725,7 +790,6 @@ body {
   height: 330px;
   justify-content: space-around;
   margin-top: 30px;
-  overflow: hidden;
   position: relative;
   width: 100%;
   z-index: 0;
@@ -776,10 +840,6 @@ body {
 }
 .main .rewards__value-prop--title {
   font-size: 16px;
-  font-weight: 600;
-  letter-spacing: 1.26px;
-  padding-bottom: 8px;
-  text-transform: uppercase;
 }
 .main .rewards__value-prop--text {
   font-size: 14px;
@@ -817,38 +877,38 @@ body {
   color: #000000;
 }
 .main .trending {
-  overflow-x: hidden;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1000px;
+  width: 100%;
 }
 .main .trending__arrow {
   display: none;
 }
 .main .trending__title {
-  font-size: 30px;
-  font-weight: 500;
-  margin: 50px 0 50px 0;
-  text-align: center;
+  margin: 0;
+  text-transform: uppercase;
 }
 .main .trending__card {
-  margin: 0 30px 0 0;
-}
-.main .trending__card--carousel {
-  overflow: hidden;
-  white-space: nowrap;
+  margin: 10px;
 }
 .main .trending__card--wrapper {
-  animation: 25s slide infinite linear;
-  display: inline-flex;
-  justify-content: flex-end;
-  margin-bottom: 23px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 10px;
+  width: 700px;
 }
 .main .trending__card--image {
   width: 100%;
 }
 .main .trending__card--image-wrapper {
-  background-color: #000000;
-  height: 264px;
+  height: 220px;
   position: relative;
-  width: 264px;
+  width: 200px;
 }
 .main .trending__card--image-wrapper:hover {
   cursor: pointer;
@@ -877,7 +937,7 @@ body {
   position: absolute;
   top: 55%;
   transform: translate(-50%, -50%);
-  width: 264px;
+  width: 220px;
 }
 .main .trending__card--icon {
   height: 24px;
@@ -897,7 +957,7 @@ body {
   letter-spacing: 1.18px;
   line-height: 22px;
   margin: 5px 0 7px;
-  max-width: 245px;
+  max-width: 220px;
 }
 .main .trending__card--price {
   font-size: 15px;
@@ -905,15 +965,33 @@ body {
   letter-spacing: 1.18px;
   margin-top: 10px;
 }
-.main .trending:hover .trending__card--wrapper {
-  animation-play-state: paused;
+.main .portfolio__detail {
+  display: flex;
+  flex-direction: column;
+}
+.main .portfolio__detail li {
+  display: flex;
+}
+.main .portfolio__detail img {
+  width: 500px;
 }
 
-@media screen and (min-width: 1605px) {
-  .trending__card--wrapper {
-    animation: 25s slide infinite linear;
-  }
+.portfolio,
+.experience,
+.bio {
+  align-items: flex-start;
+  color: rgba(101, 89, 89, 0.8078431373);
+  display: none;
+  flex-direction: column;
+  font-size: 20px;
+  height: 100vh;
+  justify-content: flex-start;
+  padding-top: 50px;
+  position: relative;
+  max-width: 1000px;
+  width: 100%;
 }
+
 @media screen and (min-width: 769px) and (max-width: 1400px) {
   .main .rewards__title {
     font-size: 30px;
@@ -969,14 +1047,8 @@ body {
   .main .trending__card:last-of-type {
     margin-right: -18px;
   }
-  .main .trending__card--wrapper {
-    animation: 25s slide infinite linear;
-  }
 }
 @media screen and (max-width: 992px) {
-  .page {
-    width: calc(100vw - 30px);
-  }
   .header__login--icon.fa-solid, .header__bag--icon, .header__navbar--icon {
     color: black;
   }

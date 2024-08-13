@@ -1,0 +1,70 @@
+// media queries and animations
+@mixin OpenSans {
+    font-family: 'Open Sans', sans-serif;
+}
+
+@mixin Ojuju {
+    font-family: 'Ojuju', sans-serif;
+}
+
+@mixin Inter {
+    font-family: 'Inter', sans-serif;
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeOne {
+    0% {
+        opacity: .7;
+    }
+
+    50% {
+        opacity: .2;
+    }
+
+    100% {
+        opacity: .5;
+    }
+}
+
+@keyframes fadeTwo {
+    0% {
+        opacity: .2;
+    }
+
+    50% {
+        opacity: .5;
+    }
+
+    100% {
+        opacity: .2;
+    }
+}

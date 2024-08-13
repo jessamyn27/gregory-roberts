@@ -1,67 +1,18 @@
-//global variables
-// let carousel = document.querySelectorAll(".carousel__card");
-// let carouselArrowLeft = document.querySelector(".carousel__arrow--left");
-// let carouselArrowRight = document.querySelector(".carousel__arrow--right");
-// let carouselCurrent = 0;
+// global variables
+let homeBtn = document.getElementById("home-btn");
+let home = document.getElementById("home");
+let portfolioBtn = document.getElementById("portfolio-btn");
+let portfolio = document.getElementById("portfolio");
+let experienceBtn = document.getElementById("experience-btn");
+let experience = document.getElementById("experience");
+let bioBtn = document.getElementById("bio-btn");
+let bio = document.getElementById("bio");
 
-//carousel
-// carouselReset = () => {
-//     for (let i = 0; i < carousel.length; i++) {
-//         carousel[i].style.opacity = "1";
-//         carousel[i].style.display = "flex";
-//         carousel[i].style.animation = "5s fadeInOut ease-out";
-//     }
-// }
-
-// carouselStartSlide = () => {
-//     carouselReset();
-//     carousel[i].style.opacity = "1";
-//     carousel[i].style.display = "flex";
-//     carousel[0].style.animation = "5s fadeInOut ease-out";
-// }
-
-// carouselSlideLeft = () => {
-//     carouselReset();
-//     carousel[carouselCurrent - 1].style.display = "flex";
-//     carouselCurrent--;
-// }
-
-// carouselSlideRight = () => {
-//     carouselReset();
-//     carousel[carouselCurrent + 1].style.display = "flex";
-//     carouselCurrent++;
-// }
-
-// carouselArrowLeft.addEventListener("click", () => {
-//     if (carouselCurrent === 0) {
-//         carouselCurrent = carousel.length;
-//     }
-//     carouselSlideLeft();
-// });
-
-// carouselArrowRight.addEventListener("click", () => {
-//     if (carouselCurrent === carousel.length - 1) {
-//         carouselCurrent = -1;
-//     }
-//     carouselSlideRight();
-// });
-
-// carouselSlideAuto = () => {
-//     carouselReset();
-//     carousel[carouselCurrent + 1].style.opacity = "1";
-//     carousel[carouselCurrent + 1].style.display = "flex";
-//     carousel[i].style.animation = "1s fadeInOut ease-out";
-//     carouselCurrent++;
-// }
-
-// setInterval(() => {
-//     if (carouselCurrent === carousel.length - 1) {
-//         carouselCurrent = -1;
-//     }
-//     carouselSlideRight();
-// }, "7000");
-
-// carouselStartSlide();
+// default states
+home.display = "flex";
+portfolio.display = "none";
+experience.display = "none";
+bio.display = "none";
 
 // mobile nav sidebar
 openNav = () => {
@@ -72,21 +23,41 @@ closeNav = () => {
     document.getElementById("myNav").style.width = "0%";
 }
 
-// animated navbar item underline
-slidebar = (e) => {
-    let element = e.target;
-    let mouse = e.offsetX;
-    let fullWidth = e.target.offsetWidth;
-    let midWidth = (fullWidth / 2);
-    if (mouse < midWidth) {
-        element.classList.add('to-right');
-        element.classList.remove('to-left');
-    } else {
-        element.classList.remove('to-right');
-        element.classList.add('to-left');
+handleClick = (event) => {
+    let target = event.target;
+    console.log(target);
+
+    // click home
+    if (target === homeBtn) {
+        home.style.display = "flex";
+        portfolio.style.display = "none";
+        experience.style.display = "none";
+        bio.style.display = "none";
+    }
+
+    // click portfolio
+    if (target === portfolioBtn) {
+        home.style.display = "none";
+        portfolio.style.display = "flex";
+        experience.style.display = "none";
+        bio.style.display = "none";
+    }
+
+    // click experience
+    if (target === experienceBtn) {
+        home.style.display = "none";
+        portfolio.style.display = "none";
+        experience.style.display = "flex";
+        bio.style.display = "none";
+    }
+
+    // click bio
+    if (target === bioBtn) {
+        home.style.display = "none";
+        portfolio.style.display = "none";
+        experience.style.display = "none";
+        bio.style.display = "flex";
     }
 }
 
-// trending carousel on infinite animation copy
-let trendingCardWrapper = document.querySelector(".trending__card--wrapper").cloneNode(true);
-let trending = document.querySelector(".trending__card--carousel").appendChild(trendingCardWrapper);
+handleClick();
