@@ -966,8 +966,8 @@
 .bio {
     align-items: flex-start;
     justify-content: center;
-    margin-top: 300px;
-    width: 700px;
+    margin-top: 50px;
+    width: 100%;
 
     div {
         display: flex;
@@ -975,12 +975,13 @@
         justify-content: flex-start;
         min-height: 100%;
         overflow: scroll;
+        margin-bottom: 100px;
     }
 
     img {
         margin-bottom: 20px;
         text-align: center;
-        width: 300px;
+        width: 90%;
     }
 
     p {

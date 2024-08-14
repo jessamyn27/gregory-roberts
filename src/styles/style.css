@@ -1006,8 +1006,8 @@ p {
 .bio {
   align-items: flex-start;
   justify-content: center;
-  margin-top: 300px;
-  width: 700px;
+  margin-top: 50px;
+  width: 100%;
 }
 .bio div {
   display: flex;
@@ -1015,11 +1015,12 @@ p {
   justify-content: flex-start;
   min-height: 100%;
   overflow: scroll;
+  margin-bottom: 100px;
 }
 .bio img {
   margin-bottom: 20px;
   text-align: center;
-  width: 300px;
+  width: 90%;
 }
 .bio p {
   color: #afadad;
