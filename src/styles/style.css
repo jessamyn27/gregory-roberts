@@ -994,6 +994,23 @@ p {
   width: 100%;
 }
 
+.bio {
+  align-items: center;
+  justify-content: center;
+  width: 700px;
+}
+.bio img {
+  margin-bottom: 20px;
+  text-align: center;
+  width: 300px;
+}
+.bio p {
+  color: #afadad;
+  font-size: 14px;
+  line-height: 1.4;
+  padding-bottom: 10px;
+}
+
 @media screen and (min-width: 769px) and (max-width: 1400px) {
   .main .rewards__title {
     font-size: 30px;
