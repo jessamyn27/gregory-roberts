@@ -966,13 +966,13 @@ p {
 .main .portfolio__detail img {
   height: 90vh;
 }
-.main .portfolio__detail div {
+.main .portfolio__detail--text {
   color: white;
   display: flex;
   flex-direction: column;
   margin: 0 0 0 30px;
 }
-.main .portfolio__detail div p {
+.main .portfolio__detail--text p {
   color: rgba(223, 217, 217, 0.9137254902);
   font-size: 16px;
   line-height: 1.4;
