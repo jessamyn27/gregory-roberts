@@ -892,16 +892,24 @@
 
     .portfolio {
         &__detail {
-            // align-items: center;
+            align-items: flex-start;
             display: flex;
             flex-direction: column;
-            // justify-content: center;
+            justify-content: flex-start;
             max-width: 100vw;
 
             li {
                 display: flex;
                 // margin: 50px 0;
+                justify-items: flex-start;
                 padding-top: 50px;
+
+            }
+
+            #spotlight {
+                img {
+                    height: 370px;
+                }
             }
 
             .image-wrapper {
@@ -914,6 +922,7 @@
                 height: 90vh;
                 // max-width: 1000px;
             }
+
 
             &--text {
                 color: white;
@@ -955,10 +964,18 @@
 }
 
 .bio {
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
-    margin-top: 150px;
+    margin-top: 300px;
     width: 700px;
+
+    div {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        min-height: 100%;
+        overflow: scroll;
+    }
 
     img {
         margin-bottom: 20px;
