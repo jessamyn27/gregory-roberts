@@ -303,12 +303,11 @@ p {
 }
 .menu__title {
   font-family: "Ojuju", sans-serif;
-  color: rgba(101, 89, 89, 0.8078431373);
-  font-size: 27px;
+  color: rgba(144, 133, 133, 0.8078431373);
+  font-size: 30px;
   font-weight: 400;
   padding-bottom: 5px;
   text-align: left;
-  text-transform: uppercase;
 }
 .menu__link {
   color: rgba(101, 89, 89, 0.8078431373);
@@ -900,24 +899,24 @@ p {
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 10px;
-  width: 700px;
+  width: 900px;
 }
 .main .trending__card--image {
   width: 100%;
 }
 .main .trending__card--image-wrapper {
-  height: 220px;
+  height: 190px;
   position: relative;
-  width: 200px;
+  width: 190px;
 }
-.main .trending__card--image-wrapper:hover {
+.main .trending__card--image-wrapper:hover a {
   cursor: pointer;
 }
 .main .trending__card--image-wrapper:hover .trending__card--button-wrapper {
   opacity: 1;
 }
 .main .trending__card--image-wrapper:hover .trending__card--image {
-  opacity: 0.7;
+  opacity: 0.3;
 }
 .main .trending__card--button {
   color: #ffffff;
@@ -943,27 +942,18 @@ p {
   height: 24px;
   width: 29px;
 }
-.main .trending__card--banner {
-  color: #7e241b;
-  font-size: 17px;
-  font-weight: 600;
-  letter-spacing: 1.18px;
-  line-height: 20px;
-  margin-top: 5px;
-}
 .main .trending__card--title {
-  font-size: 12px;
+  font-family: "Open Sans", sans-serif;
+  color: rgba(132, 107, 107, 0.9137254902);
+  padding: 5px 0;
+}
+.main .trending__card--subtitle {
+  font-family: "Open Sans", sans-serif;
+  color: rgba(213, 190, 190, 0.9137254902);
+  font-size: 18px;
   font-weight: 300;
   letter-spacing: 1.18px;
-  line-height: 22px;
-  margin: 5px 0 7px;
-  max-width: 220px;
-}
-.main .trending__card--price {
-  font-size: 15px;
-  font-weight: 400;
-  letter-spacing: 1.18px;
-  margin-top: 10px;
+  padding: 5px 0 15px 0;
 }
 .main .portfolio__detail {
   display: flex;
@@ -971,9 +961,21 @@ p {
 }
 .main .portfolio__detail li {
   display: flex;
+  padding-top: 50px;
 }
 .main .portfolio__detail img {
-  width: 500px;
+  height: 90vh;
+}
+.main .portfolio__detail div {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 0 30px;
+}
+.main .portfolio__detail div p {
+  color: rgba(223, 217, 217, 0.9137254902);
+  font-size: 16px;
+  line-height: 1.4;
 }
 
 .portfolio,

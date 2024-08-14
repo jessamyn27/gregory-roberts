@@ -31,7 +31,7 @@ handleClick = (event) => {
     if (target === homeBtn) {
         home.style.display = "flex";
         portfolio.style.display = "none";
-        experience.style.display = "none";
+        // experience.style.display = "none";
         bio.style.display = "none";
     }
 
@@ -39,23 +39,18 @@ handleClick = (event) => {
     if (target === portfolioBtn) {
         home.style.display = "none";
         portfolio.style.display = "flex";
-        experience.style.display = "none";
+        // experience.style.display = "none";
         bio.style.display = "none";
     }
 
     // click experience
-    if (target === experienceBtn) {
-        home.style.display = "none";
-        portfolio.style.display = "none";
-        experience.style.display = "flex";
-        bio.style.display = "none";
-    }
+
 
     // click bio
     if (target === bioBtn) {
         home.style.display = "none";
         portfolio.style.display = "none";
-        experience.style.display = "none";
+        // experience.style.display = "none";
         bio.style.display = "flex";
     }
 }

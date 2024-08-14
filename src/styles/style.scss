@@ -32,12 +32,12 @@
 
     &__title {
         @include Ojuju();
-        color: #655959ce;
-        font-size: 27px;
+        color: #908585ce;
+        font-size: 30px;
         font-weight: 400;
         padding-bottom: 5px;
         text-align: left;
-        text-transform: uppercase;
+        // text-transform: uppercase;
     }
 
     &__link {
@@ -802,7 +802,7 @@
                 justify-content: space-between;
                 margin: 10px;
                 // margin-bottom: 23px;
-                width: 700px;
+                width: 900px;
             }
 
 
@@ -811,12 +811,15 @@
 
                 &-wrapper {
                     // background-color: #000000;
-                    height: 220px;
+                    height: 190px;
                     position: relative;
-                    width: 200px;
+                    width: 190px;
 
                     &:hover {
-                        cursor: pointer;
+
+                        a {
+                            cursor: pointer;
+                        }
 
                         .trending__card {
                             &--button-wrapper {
@@ -824,7 +827,7 @@
                             }
 
                             &--image {
-                                opacity: 0.7;
+                                opacity: 0.3;
                             }
                         }
                     }
@@ -858,30 +861,26 @@
                 width: 29px;
             }
 
-            &--banner {
-                color: #7e241b;
-                font-size: 17px;
-                font-weight: 600;
-                letter-spacing: 1.18px;
-                line-height: 20px;
-                margin-top: 5px;
+            &--title {
+                @include OpenSans();
+                color: #846b6be9;
+                // font-size: 12px;
+                // font-weight: 300;
+                // letter-spacing: 1.18px;
+                // line-height: 22px;
+                padding: 5px 0;
+                // max-width: 220px;
             }
 
-            &--title {
-                font-size: 12px;
+            &--subtitle {
+                @include OpenSans();
+                color: #d5bebee9;
+                font-size: 18px;
                 font-weight: 300;
                 letter-spacing: 1.18px;
-                line-height: 22px;
-                margin: 5px 0 7px;
-                max-width: 220px;
+                padding: 5px 0 15px 0;
             }
 
-            &--price {
-                font-size: 15px;
-                font-weight: 400;
-                letter-spacing: 1.18px;
-                margin-top: 10px;
-            }
         }
 
         &:hover {
@@ -893,15 +892,39 @@
 
     .portfolio {
         &__detail {
+            // align-items: center;
             display: flex;
             flex-direction: column;
+            // justify-content: center;
 
             li {
                 display: flex;
+                // margin: 50px 0;
+                padding-top: 50px;
+            }
+
+            .image-wrapper {
+                // height: 90vh;
+                // max-width: 80vw;
             }
 
             img {
-                width: 500px;
+                // width: 100%;
+                height: 90vh;
+                // max-width: 1000px;
+            }
+
+            div {
+                color: white;
+                display: flex;
+                flex-direction: column;
+                margin: 0 0 0 30px;
+
+                p {
+                    color: #dfd9d9e9;
+                    font-size: 16px;
+                    line-height: 1.4;
+                }
             }
         }
     }
