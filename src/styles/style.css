@@ -895,9 +895,8 @@ p {
 .main .trending__card--wrapper {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   margin: 10px;
-  width: 950px;
+  max-width: 950px;
 }
 .main .trending__card--image {
   width: 100%;
@@ -943,12 +942,13 @@ p {
 .main .trending__card--title {
   font-family: "Open Sans", sans-serif;
   color: rgba(132, 107, 107, 0.9137254902);
+  font-size: 24px;
   padding: 5px 0;
 }
 .main .trending__card--subtitle {
   font-family: "Open Sans", sans-serif;
   color: rgba(213, 190, 190, 0.9137254902);
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 300;
   letter-spacing: 1.18px;
   padding: 5px 0 15px 0;
@@ -973,12 +973,12 @@ p {
   display: flex;
   flex-direction: column;
   margin: 0 0 0 30px;
-  max-width: 400px;
 }
 .main .portfolio__detail--text p {
   color: rgba(223, 217, 217, 0.9137254902);
   font-size: 16px;
   line-height: 1.4;
+  max-width: 300px;
 }
 
 .portfolio,
@@ -1063,9 +1063,6 @@ p {
   .main .trending__title {
     font-size: 20px;
     margin: 20px 0 20px;
-  }
-  .main .trending__card {
-    margin: 0;
   }
   .main .trending__card:last-of-type {
     margin-right: -18px;
