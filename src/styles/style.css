@@ -1027,6 +1027,23 @@ p {
   padding-bottom: 10px;
 }
 
+@media screen and (min-width: 1605px) {
+  .main .carousel__card--one {
+    left: -68px;
+    position: absolute;
+    top: -20px;
+  }
+  .main .carousel__card--two {
+    left: -17px;
+    position: absolute;
+    top: 19px;
+  }
+  .main .carousel__card--three {
+    left: 0px;
+    position: absolute;
+    top: 38px;
+  }
+}
 @media screen and (min-width: 769px) and (max-width: 1400px) {
   .main .rewards__title {
     font-size: 30px;
@@ -1111,6 +1128,28 @@ p {
   }
   .main .portfolio__detail #spotlight img {
     height: auto;
+  }
+  .main .portfolio__detail--text p {
+    max-width: 350px;
+  }
+  .main .carousel__card--bg {
+    height: 100%;
+    width: 100%;
+  }
+  .main .carousel__card--content {
+    width: 400px;
+  }
+  .main .carousel__card--one {
+    left: -207px;
+    top: 48px;
+  }
+  .main .carousel__card--two {
+    left: -192px;
+    top: 60px;
+  }
+  .main .carousel__card--three {
+    left: -184px;
+    top: 65px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -1214,6 +1253,22 @@ p {
   }
   .main .rewards__value-prop--text {
     display: none;
+  }
+  .main .carousel__card--bg {
+    height: 100%;
+    width: 100%;
+  }
+  .main .carousel__card--one {
+    left: -12px;
+    top: 48px;
+  }
+  .main .carousel__card--two {
+    left: 114px;
+    top: 60px;
+  }
+  .main .carousel__card--three {
+    left: 121px;
+    top: 66px;
   }
 }
 
